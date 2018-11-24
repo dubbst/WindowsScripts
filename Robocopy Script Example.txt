@@ -1,0 +1,16 @@
+robocopy o:\ q:\MovieBackUp /mir /a-:sh /v
+
+**Use /e instead of /mir to make a full copy and
+  not purge inconsistent files in destination 
+  folder.
+
+ robocopy C:\ D:\ /w:1 /r:1
+/R:n indicates number of retries on failed copies, such as 
+those encountering on open files. By default RoboCopy retries 
+for 1 million times.
+
+/W:n indicates the wait time between retries. By default it is 
+30 seconds. If you want RoboCopy to skip any failed copy 
+quickly, reduce it to lesser amount.
+
+robocopy n:\ f:\4TBNASCopy /mir /a-:sh /w:1 /r:1 /v
